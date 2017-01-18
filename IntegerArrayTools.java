@@ -115,7 +115,7 @@ public class IntegerArrayTools
     return max;
   }
   
-  /** Find which position the largest integer of the array is in
+  /** Find the position of the largest integer in an integer array
     * @return the location of the largest element in the array
     */
   public int getMaxIndex()
@@ -128,6 +128,34 @@ public class IntegerArrayTools
     }
     return pos;
   }
+ 
+ /** Find the smallest integer in an integer array
+    * @return the smallest element in the array
+    */
+  public int getMin ()
+  {
+    int min = arrayData[0];
+    for(int i = 1; i < arrayData.length; i++)
+    {
+      if (arrayData[i] < min)
+        min = arrayData[i];
+    }
+    return min;
+  }
+  
+  /** Find the position of the smallest integer of an integer array 
+    * @return the location of the smallest element in the array
+    */
+  public int getMinIndex ()
+  {
+    int pos = 0;
+    for (int i = 1; i < arrayData.length; i++)
+    {
+      if (arrayData[i] < arrayData[pos])
+        pos = i;
+    }
+    return pos;
+  }  
  
   /** Tests the various array tools */
   public static void main (String[] args)
