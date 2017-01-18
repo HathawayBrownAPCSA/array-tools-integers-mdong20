@@ -101,7 +101,34 @@ public class IntegerArrayTools
     return sum;
   }
   
+   /** Find the largest item in an integer array
+    * @return the larget element in the array
+    */
+  public int getMax ()
+  {
+    int max = arrayData[0];
+    for (int i = 1; i < arrayData.length; i++)
+    {
+      if (arrayData[i] > max)
+        max = arrayData[i];
+    }
+    return max;
+  }
   
+  /** Find which position the largest integer of the array is in
+    * @return the location of the largest element in the array
+    */
+  public int getMaxIndex()
+  {
+    int pos = 0;
+    for (int i = 1; i < arrayData.length; i++)
+    {
+      if (arrayData[i] > arrayData[pos])
+        pos = i;
+    }
+    return pos;
+  }
+ 
   /** Tests the various array tools */
   public static void main (String[] args)
   {
