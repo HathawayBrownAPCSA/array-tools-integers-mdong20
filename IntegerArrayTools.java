@@ -107,7 +107,7 @@ public class IntegerArrayTools
   public int getMax ()
   {
     int max = arrayData[0];
-    for (int i = 1; i < arrayData.length; i++)
+    for (int i = 0; i < arrayCount; i++)
     {
       if (arrayData[i] > max)
         max = arrayData[i];
@@ -121,7 +121,7 @@ public class IntegerArrayTools
   public int getMaxIndex()
   {
     int pos = 0;
-    for (int i = 1; i < arrayData.length; i++)
+    for (int i = 0; i < arrayCount; i++)
     {
       if (arrayData[i] > arrayData[pos])
         pos = i;
@@ -135,7 +135,7 @@ public class IntegerArrayTools
   public int getMin ()
   {
     int min = arrayData[0];
-    for(int i = 1; i < arrayData.length; i++)
+    for(int i = 0; i < arrayCount; i++)
     {
       if (arrayData[i] < min)
         min = arrayData[i];
@@ -149,7 +149,7 @@ public class IntegerArrayTools
   public int getMinIndex ()
   {
     int pos = 0;
-    for (int i = 1; i < arrayData.length; i++)
+    for (int i = 0; i < arrayCount; i++)
     {
       if (arrayData[i] < arrayData[pos])
         pos = i;
