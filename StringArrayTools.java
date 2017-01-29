@@ -5,6 +5,7 @@
   * that are used can vary.
   * 
   * @author Michelle Dong
+  * @version 1/29/17
   */
 
 import java.util.Scanner;
@@ -174,7 +175,7 @@ public class StringArrayTools
     myArray.fillKeyboard ();
     myArray.printArray ();
     System.out.println ("There are " + myArray.getCount() + " strings in the array.");
-//    System.out.println ("The sum is " + myArray.sumArray());
+//  System.out.println ("The sum is " + myArray.sumArray());
     
     // Un-comment these lines one at a time after you have written the appropriate code
     System.out.println ("The largest item (lexicographically) is " + myArray.getMax() ); 
