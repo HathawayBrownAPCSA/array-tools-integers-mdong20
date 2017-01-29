@@ -1,0 +1,8 @@
+Well done all around!  Good conversion from integers to Strings.
+One issue: your getMinIndex and getMaxIndex don't work properly - the min and max variables aren't updated
+the way that you think they are, because you have indentation but not { braces } on the if statement.
+
+Other than that one thing, this is good.
+Please be sure you test your code and make sure it gives the correct answer in many different situations!
+
+9/10
