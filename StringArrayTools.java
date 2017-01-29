@@ -126,8 +126,10 @@ public class StringArrayTools
     for (int i = 0; i < arrayCount; i++)
     {
       if (arrayData[i].compareTo(max) > 0)
+      {
         pos = i;
         max = arrayData[i]; 
+      }
     }
     return pos;
   }
@@ -156,45 +158,13 @@ public class StringArrayTools
     for (int i = 1; i < arrayCount; i++)
     {
       if (arrayData[i].compareTo(min) < 0)
+      {
         pos = i;
         min = arrayData[i];
+      }
     }
     return pos;
   }  
-  
-  /** Find the position of the smallest string of an string array 
-    * @return the location of the smallest element in the array
-    * @param the starting position
-    */
-  public int getMinIndex (int start)
-  {
-    int pos = start; 
-    for (int i = 1; i < arrayCount; i++)
-    {
-      if (arrayData[i].compareTo(arrayData[pos]) < 0)
-        pos = i;
-    }
-    return pos;
-  }  
-  
-  /** Sorts the array from first to last, alphabetically
-    */
-  public void sort()
-  {
-    int pos = 0; 
-    while (pos < arrayCount - 1)
-    {
-      int min = getMinIndex(pos);
-      String temp = arrayData[min];
-      arrayData[min] = arrayData[pos];
-      arrayData[pos] = temp;
-      pos++; // array is sorted from 0 to position
-//    System.out.print("Pass # " + pos + "\n" );
-//    printArray();
-//    System.out.println();
-    }
-    
-  }
  
   /** Tests the various array tools */
   public static void main (String[] args)
@@ -212,9 +182,6 @@ public class StringArrayTools
 
     System.out.println ("The smallest item (lexicographically) is " + myArray.getMin() );
     System.out.println ("The smallest item (lexicographically) is at index " + myArray.getMinIndex());
-    
-    myArray.sort();
-    myArray.printArray();
   
   }
 }
